@@ -3,12 +3,6 @@ package Adapter.Screens;
 import Adapter.Bases.BaseMobileScreen;
 import Core.By;
 import Core.MobileElement;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-
-import java.io.File;
-import java.io.IOException;
 
 
 public class WatchlistScreen extends BaseMobileScreen {
@@ -19,9 +13,7 @@ public class WatchlistScreen extends BaseMobileScreen {
         super();
     }
 
-    public String checkTitlesInWatchlist() throws IOException {
-        File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(file, new File("C:\\Users\\jburgos\\OneDrive - ENDAVA\\Documents\\MobileChallenge\\ScreenshotsTest2.jpg"));
+    public String checkTitlesInWatchlist() {
         return findMobileElement(moviesInWatchlist).getText();
     }
 }

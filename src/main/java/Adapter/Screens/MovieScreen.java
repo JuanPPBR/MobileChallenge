@@ -27,9 +27,7 @@ public class MovieScreen extends BaseMobileScreen {
         super();
     }
 
-    public String getOverview() throws IOException {
-        File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(file, new File("C:\\Users\\jburgos\\OneDrive - ENDAVA\\Documents\\MobileChallenge\\ScreenshotTest1.jpg"));
+    public String getOverview() {
         return findMobileElement(movieOverview).getText();
     }
 
@@ -46,9 +44,7 @@ public class MovieScreen extends BaseMobileScreen {
         findMobileElement(rateButton).click();
     }
 
-    public String checkYourRating() throws IOException {
-        File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(file, new File("C:\\Users\\jburgos\\OneDrive - ENDAVA\\Documents\\MobileChallenge\\ScreenshotTest3.jpg"));
+    public String checkYourRating() {
         return findMobileElement(yourRate).getText();
     }
 }
